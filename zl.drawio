@@ -25,65 +25,41 @@
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-7" value="Heartbeat &#xa;Timeout?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="160" y="440" width="110" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-8" value="Current &#xa;Status?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="160" y="585" width="110" height="80" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-9" value="Trigger DOWN Event&#xa;- For Camera: handle_camera_change(url, 0)&#xa;- For Node: handle_node_change(node, 0)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="100" y="720" width="230" height="60" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-9" value="Trigger DOWN Event&lt;br&gt;- For Camera: camera_down&lt;br&gt;- For Node: node_down" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="70" y="620" width="220" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-11" value="MQTT Message Handler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="435" y="320" width="190" height="40" as="geometry" />
+          <mxGeometry x="435" y="300" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-12" value="Receive MQTT Message" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="435" y="380" width="190" height="40" as="geometry" />
+          <mxGeometry x="435" y="360" width="190" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-13" value="Message &#xa;Type?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-13" value="Check camera/node status" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="475" y="440" width="110" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-14" value="Process Camera Heartbeat&#xa;- Update Timestamp&#xa;- Update Status to Online (1)&#xa;- Trigger handle_camera_change()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="370" y="540" width="200" height="70" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-15" value="&lt;br&gt;- Update camera/node&amp;nbsp; heartbeat timestamp&lt;div&gt;&lt;br/&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
+          <mxGeometry x="550" y="530" width="140" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-15" value="Process Node Heartbeat&#xa;- Update Timestamp&#xa;- Update Status to Online (1)&#xa;- Trigger handle_node_change()" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="590" y="540" width="200" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-16" value="Event Processing" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="730" y="320" width="190" height="40" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-16" value="Event Process" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="970" y="290" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-17" value="Event &#xa;Type?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="770" y="380" width="110" height="80" as="geometry" />
+          <mxGeometry x="820" y="370" width="490" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-18" value="Process Camera DOWN Event&#xa;- Update RTSPConfig status&#xa;- Identify affected links" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="620" y="480" width="180" height="60" as="geometry" />
+          <mxGeometry x="1120" y="140" width="180" height="60" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-19" value="Process Camera UP Event&#xa;- Update RTSPConfig status&#xa;- Identify links to restore" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="850" y="480" width="180" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-20" value="Process Node DOWN Event&#xa;- Update RTSPConfig status&#xa;- Identify cameras to migrate&#xa;- Select target nodes" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="620" y="560" width="180" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-21" value="Process Node UP Event&#xa;- Update RTSPConfig status&#xa;- Identify cameras to restore&#xa;- Prepare original config" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="850" y="560" width="180" height="70" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-19" value="set camera online&amp;nbsp;&lt;div&gt;and get recover op&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="510" width="180" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-22" value="Update ConfigMap (Camera Down)&#xa;- Function: remove_broken_camera()&#xa;- Update source-list&#xa;- Remove affected camera links" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="620" y="650" width="180" height="70" as="geometry" />
+          <mxGeometry x="1170" y="150" width="180" height="70" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-23" value="Update ConfigMap (Camera Up)&#xa;- Function: add_repaired_camera()&#xa;- Update source-list&#xa;- Restore camera links" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="850" y="650" width="180" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-24" value="Update ConfigMap (Node Down)&#xa;- Function: move_camera_to_node()&#xa;- Redistribute cameras&#xa;- Update source-list" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="620" y="740" width="180" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-25" value="Restart Affected Pods&#xa;- Identify pods on offline node&#xa;- Restart with new configuration" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="620" y="830" width="180" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-26" value="Update ConfigMap (Node Up)&#xa;- Function: add_repaired_node()&#xa;- Restore original config&#xa;- Update source-list" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="850" y="740" width="180" height="70" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-27" value="Restart Affected Pods&#xa;- Identify migrated pods&#xa;- Restart with restored config" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="850" y="830" width="180" height="60" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-23" value="use recover op 2 update configmap&lt;div&gt;restart pods&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="1130" y="600" width="180" height="70" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-28" value="Update Prometheus Metrics&#xa;- Update node status metrics&#xa;- Update camera status metrics&#xa;- Generate status matrix" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#e1d5e7;strokeColor=#9673a6;" vertex="1" parent="1">
-          <mxGeometry x="430" y="910" width="200" height="70" as="geometry" />
+          <mxGeometry x="910" y="970" width="200" height="70" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-29" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-1" target="NTYFQSR5KiZM-KbyBYHa-2">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
@@ -112,8 +88,7 @@
             <mxPoint x="390" y="400" as="sourcePoint" />
             <mxPoint x="440" y="350" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="530" y="270" />
-              <mxPoint x="530" y="270" />
+              <mxPoint x="530" y="100" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -122,8 +97,8 @@
             <mxPoint x="390" y="400" as="sourcePoint" />
             <mxPoint x="440" y="350" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="530" y="270" />
-              <mxPoint x="825" y="270" />
+              <mxPoint x="547" y="270" />
+              <mxPoint x="1065" y="270" />
             </Array>
           </mxGeometry>
         </mxCell>
@@ -139,13 +114,6 @@
             <mxPoint x="440" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-36" value="Yes" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-7" target="NTYFQSR5KiZM-KbyBYHa-8">
-          <mxGeometry x="-0.2" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-40" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-11" target="NTYFQSR5KiZM-KbyBYHa-12">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="400" as="sourcePoint" />
@@ -158,60 +126,20 @@
             <mxPoint x="440" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-42" value="RTSP Heartbeat" style="endArrow=classic;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-13" target="NTYFQSR5KiZM-KbyBYHa-14">
-          <mxGeometry x="-0.2" y="-10" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-43" value="Node Heartbeat" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-13" target="NTYFQSR5KiZM-KbyBYHa-15">
-          <mxGeometry x="-0.2" y="10" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-44" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-16" target="NTYFQSR5KiZM-KbyBYHa-17">
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="400" as="sourcePoint" />
             <mxPoint x="440" y="350" as="targetPoint" />
           </mxGeometry>
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-45" value="Camera DOWN" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-18">
-          <mxGeometry x="-0.1429" y="-10" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-46" value="Camera UP" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-19">
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-46" value="Camera UP" style="endArrow=classic;html=1;exitX=0.832;exitY=0.671;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitPerimeter=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-19">
           <mxGeometry x="-0.1429" y="10" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="400" as="sourcePoint" />
             <mxPoint x="440" y="350" as="targetPoint" />
             <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-47" value="Node DOWN" style="endArrow=classic;html=1;exitX=0;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-20">
-          <mxGeometry x="0.1429" y="-10" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="770" y="460" />
-              <mxPoint x="710" y="460" />
+              <mxPoint x="1230" y="424" />
             </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-48" value="Node UP" style="endArrow=classic;html=1;exitX=1;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-21">
-          <mxGeometry x="0.1429" y="10" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="880" y="460" />
-              <mxPoint x="940" y="460" />
-            </Array>
-            <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-49" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-18" target="NTYFQSR5KiZM-KbyBYHa-22">
@@ -224,72 +152,6 @@
           <mxGeometry width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="400" as="sourcePoint" />
             <mxPoint x="440" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-51" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-20" target="NTYFQSR5KiZM-KbyBYHa-24">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-52" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-21" target="NTYFQSR5KiZM-KbyBYHa-26">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-53" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-24" target="NTYFQSR5KiZM-KbyBYHa-25">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-54" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-26" target="NTYFQSR5KiZM-KbyBYHa-27">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-55" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-22" target="NTYFQSR5KiZM-KbyBYHa-28">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="590" y="840" as="sourcePoint" />
-            <mxPoint x="640" y="790" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="710" y="740" />
-              <mxPoint x="400" y="740" />
-              <mxPoint x="400" y="945" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-56" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-23" target="NTYFQSR5KiZM-KbyBYHa-28">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="590" y="840" as="sourcePoint" />
-            <mxPoint x="640" y="790" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="940" y="740" />
-              <mxPoint x="660" y="740" />
-              <mxPoint x="660" y="945" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-57" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-25" target="NTYFQSR5KiZM-KbyBYHa-28">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="590" y="840" as="sourcePoint" />
-            <mxPoint x="640" y="790" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="710" y="890" />
-              <mxPoint x="430" y="890" />
-            </Array>
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-58" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=1;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-27" target="NTYFQSR5KiZM-KbyBYHa-28">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="590" y="840" as="sourcePoint" />
-            <mxPoint x="640" y="790" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="940" y="890" />
-              <mxPoint x="630" y="890" />
-            </Array>
           </mxGeometry>
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-59" value="循环监控" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-6">
@@ -315,13 +177,87 @@
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-63" value="do nothing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="300" y="460" width="80" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-66" value="currentstatus=1and timecheck timeout" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-8" target="NTYFQSR5KiZM-KbyBYHa-9">
-          <mxGeometry x="-0.2255" y="-10" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="217.5" y="680" as="sourcePoint" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-66" value="currentstatus=oline&amp;nbsp;&lt;div&gt;and&amp;nbsp; timeout =yes&lt;/div&gt;" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-7" target="NTYFQSR5KiZM-KbyBYHa-9">
+          <mxGeometry x="-0.0011" y="-7" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="215" y="665" as="sourcePoint" />
             <mxPoint x="220" y="810" as="targetPoint" />
             <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-68" value="online" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-13" target="NTYFQSR5KiZM-KbyBYHa-15">
+          <mxGeometry x="-0.2" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="640" y="490" as="sourcePoint" />
+            <mxPoint x="630" y="480" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-70" value="not oline&amp;nbsp;&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="endArrow=classic;html=1;exitX=0.504;exitY=0.951;exitDx=0;exitDy=0;exitPerimeter=0;entryX=0.522;entryY=0.016;entryDx=0;entryDy=0;entryPerimeter=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-13" target="NTYFQSR5KiZM-KbyBYHa-71">
+          <mxGeometry x="-0.3904" y="-2" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="520" y="550" as="sourcePoint" />
+            <mxPoint x="493" y="650" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-71" value="&lt;div&gt;- Update camera/node&amp;nbsp; heartbeat timestamp&lt;/div&gt;Trigger DOWN Event&lt;br&gt;- For Camera: camera_up&lt;br&gt;- For Node: node_up" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="365" y="620" width="220" height="90" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-76" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-73" target="NTYFQSR5KiZM-KbyBYHa-75">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-73" value="set camera online&amp;nbsp;&lt;div&gt;and get down op&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="505" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-74" value="Camera down" style="endArrow=classic;html=1;edgeStyle=orthogonalEdgeStyle;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-73">
+          <mxGeometry x="-0.1429" y="10" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1380" y="389" as="sourcePoint" />
+            <mxPoint x="1420" y="480" as="targetPoint" />
+            <mxPoint as="offset" />
             <Array as="points">
-              <mxPoint x="218" y="715" />
+              <mxPoint x="1430" y="389" />
+            </Array>
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-75" value="use down op 2 update configmap&lt;div&gt;restart pods&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="1340" y="600" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-77" value="set node online&amp;nbsp;&lt;div&gt;and get recover op&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="940" y="510" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-78" value="use recover op 2 update configmap&lt;div&gt;restart pods&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
+          <mxGeometry x="940" y="600" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-79" value="" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-77" target="NTYFQSR5KiZM-KbyBYHa-78">
+          <mxGeometry width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="230" y="390" as="sourcePoint" />
+            <mxPoint x="280" y="340" as="targetPoint" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-82" value="node up" style="endArrow=classic;html=1;exitX=0.434;exitY=0.93;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-77">
+          <mxGeometry x="-0.3904" y="-2" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1170" y="420.00000000000045" as="sourcePoint" />
+            <mxPoint x="623.91" y="604.52" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-86" value="" style="edgeStyle=orthogonalEdgeStyle;rounded=0;orthogonalLoop=1;jettySize=auto;html=1;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-87" target="NTYFQSR5KiZM-KbyBYHa-88">
+          <mxGeometry relative="1" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-87" value="set node not online&amp;nbsp;&lt;div&gt;and get down op&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="740" y="510" width="180" height="60" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-88" value="use down op 2 update configmap&lt;div&gt;restart pods&amp;nbsp;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
+          <mxGeometry x="740" y="600" width="180" height="70" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-89" value="node up" style="endArrow=classic;html=1;exitX=0.141;exitY=0.654;exitDx=0;exitDy=0;exitPerimeter=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-17" target="NTYFQSR5KiZM-KbyBYHa-87">
+          <mxGeometry x="-0.3904" y="-2" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="1043" y="454" as="sourcePoint" />
+            <mxPoint x="1041" y="520" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="860" y="470" />
             </Array>
           </mxGeometry>
         </mxCell>
