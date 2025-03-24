@@ -1,38 +1,35 @@
 <mxfile host="app.diagrams.net" agent="Mozilla/5.0 (Windows NT 10.0; Win64; x64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/136.0.0.0 Safari/537.36" version="26.1.1">
   <diagram name="RTSP Controller Flow" id="fEzFfixYsrc_N7csI4Yp">
-    <mxGraphModel dx="926" dy="1578" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
+    <mxGraphModel dx="804" dy="2257" grid="1" gridSize="10" guides="1" tooltips="1" connect="1" arrows="1" fold="1" page="1" pageScale="1" pageWidth="827" pageHeight="1169" math="0" shadow="0">
       <root>
         <mxCell id="0" />
         <mxCell id="1" parent="0" />
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-1" value="Start" style="ellipse;whiteSpace=wrap;html=1;fillColor=#dae8fc;strokeColor=#6c8ebf;" vertex="1" parent="1">
-          <mxGeometry x="470" y="20" width="120" height="40" as="geometry" />
+          <mxGeometry x="475" y="-230" width="120" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-2" value="System Initialization&#xa;- Load K8s Configuration&#xa;- Initialize MQTT Client&#xa;- Setup Prometheus Metrics&#xa;- Initialize RTSPConfig" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="430" y="80" width="200" height="80" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-2" value="System Init&lt;br&gt;- Init k3s client&lt;br&gt;- Init MQTT Client&lt;br&gt;- Setup Prometheus Metrics&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;align=left;" vertex="1" parent="1">
+          <mxGeometry x="435" y="-160" width="200" height="80" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-3" value="Load ConfigMap&#xa;- Initialize Source Lists&#xa;- Create source-list-origin (if needed)&#xa;- Initialize Heartbeat Timestamps" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;" vertex="1" parent="1">
-          <mxGeometry x="430" y="180" width="200" height="70" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-3" value="&lt;div&gt;&lt;span style=&quot;background-color: transparent; color: light-dark(rgb(51, 51, 51), rgb(193, 193, 193));&quot;&gt;RTSPConfig Init&lt;/span&gt;&lt;/div&gt;- Create source-list-origin (if needed)&lt;br&gt;- Load ConfigMap&lt;br&gt;- Init node/camera status and records（rtsp&amp;lt;-&amp;gt;nodes :orgin and now）&lt;br&gt;&lt;div&gt;- Init Heartbeat Timestamp&lt;/div&gt;" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f5f5f5;strokeColor=#666666;fontColor=#333333;align=left;" vertex="1" parent="1">
+          <mxGeometry x="364" y="-50" width="366" height="150" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-4" value="" style="rounded=0;whiteSpace=wrap;html=1;fillColor=none;strokeColor=none;" vertex="1" parent="1">
           <mxGeometry x="490" y="270" width="80" height="20" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-5" value="Heartbeat Monitoring Thread" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
-          <mxGeometry x="140" y="320" width="190" height="40" as="geometry" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-5" value="Heartbeat check&lt;div&gt;&lt;br&gt;&lt;/div&gt;" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
+          <mxGeometry x="140" y="310" width="190" height="40" as="geometry" />
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-6" value="Check Device Heartbeats" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-6" value="Check camera/node Heartbeats timestamp" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
           <mxGeometry x="140" y="380" width="190" height="40" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-7" value="Heartbeat &#xa;Timeout?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="180" y="440" width="110" height="80" as="geometry" />
+          <mxGeometry x="160" y="440" width="110" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-8" value="Current &#xa;Status?" style="rhombus;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
-          <mxGeometry x="180" y="540" width="110" height="80" as="geometry" />
+          <mxGeometry x="160" y="585" width="110" height="80" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-9" value="Trigger DOWN Event&#xa;- For Camera: handle_camera_change(url, 0)&#xa;- For Node: handle_node_change(node, 0)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#f8cecc;strokeColor=#b85450;" vertex="1" parent="1">
-          <mxGeometry x="120" y="640" width="230" height="60" as="geometry" />
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-10" value="Trigger UP Event&#xa;- For Camera: handle_camera_change(url, 1)&#xa;- For Node: handle_node_change(node, 1)" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#d5e8d4;strokeColor=#82b366;" vertex="1" parent="1">
-          <mxGeometry x="120" y="720" width="230" height="60" as="geometry" />
+          <mxGeometry x="100" y="720" width="230" height="60" as="geometry" />
         </mxCell>
         <mxCell id="NTYFQSR5KiZM-KbyBYHa-11" value="MQTT Message Handler" style="rounded=1;whiteSpace=wrap;html=1;fillColor=#ffe6cc;strokeColor=#d79b00;" vertex="1" parent="1">
           <mxGeometry x="435" y="320" width="190" height="40" as="geometry" />
@@ -146,39 +143,6 @@
           <mxGeometry x="-0.2" width="50" height="50" relative="1" as="geometry">
             <mxPoint x="390" y="400" as="sourcePoint" />
             <mxPoint x="440" y="350" as="targetPoint" />
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-37" value="No" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-7" target="NTYFQSR5KiZM-KbyBYHa-6">
-          <mxGeometry x="-0.2857" y="-10" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="120" y="480" />
-              <mxPoint x="120" y="400" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-38" value="Timeout=True&#xa;Current=Online" style="endArrow=classic;html=1;exitX=0;exitY=0.5;exitDx=0;exitDy=0;entryX=0;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-8" target="NTYFQSR5KiZM-KbyBYHa-9">
-          <mxGeometry x="-0.1429" y="-20" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="100" y="580" />
-              <mxPoint x="100" y="670" />
-            </Array>
-            <mxPoint as="offset" />
-          </mxGeometry>
-        </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-39" value="Timeout=False&#xa;Current=Offline" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;entryX=1;entryY=0.5;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-8" target="NTYFQSR5KiZM-KbyBYHa-10">
-          <mxGeometry x="-0.2308" y="20" width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="390" y="400" as="sourcePoint" />
-            <mxPoint x="440" y="350" as="targetPoint" />
-            <Array as="points">
-              <mxPoint x="370" y="580" />
-              <mxPoint x="370" y="750" />
-            </Array>
             <mxPoint as="offset" />
           </mxGeometry>
         </mxCell>
@@ -328,15 +292,36 @@
             </Array>
           </mxGeometry>
         </mxCell>
-        <mxCell id="NTYFQSR5KiZM-KbyBYHa-59" value="循环监控" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-28" target="NTYFQSR5KiZM-KbyBYHa-5">
-          <mxGeometry width="50" height="50" relative="1" as="geometry">
-            <mxPoint x="590" y="840" as="sourcePoint" />
-            <mxPoint x="640" y="790" as="targetPoint" />
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-59" value="循环监控" style="endArrow=classic;html=1;entryX=0.5;entryY=0;entryDx=0;entryDy=0;edgeStyle=orthogonalEdgeStyle;exitX=0;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-6">
+          <mxGeometry x="0.1178" y="-10" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="140" y="589.97" as="sourcePoint" />
+            <mxPoint x="195" y="299.97" as="targetPoint" />
             <Array as="points">
-              <mxPoint x="530" y="1000" />
-              <mxPoint x="70" y="1000" />
-              <mxPoint x="70" y="290" />
-              <mxPoint x="235" y="290" />
+              <mxPoint x="140" y="600" />
+              <mxPoint x="70" y="600" />
+              <mxPoint x="70" y="270" />
+              <mxPoint x="195" y="270" />
+            </Array>
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-62" value="NO" style="endArrow=classic;html=1;exitX=1;exitY=0.5;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-7" target="NTYFQSR5KiZM-KbyBYHa-63">
+          <mxGeometry x="-0.2069" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="310" y="505" as="sourcePoint" />
+            <mxPoint x="320" y="480" as="targetPoint" />
+            <mxPoint as="offset" />
+          </mxGeometry>
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-63" value="do nothing" style="rounded=0;whiteSpace=wrap;html=1;fillColor=#fff2cc;strokeColor=#d6b656;" vertex="1" parent="1">
+          <mxGeometry x="300" y="460" width="80" height="40" as="geometry" />
+        </mxCell>
+        <mxCell id="NTYFQSR5KiZM-KbyBYHa-66" value="currentstatus=1and timecheck timeout" style="endArrow=classic;html=1;exitX=0.5;exitY=1;exitDx=0;exitDy=0;" edge="1" parent="1" source="NTYFQSR5KiZM-KbyBYHa-8" target="NTYFQSR5KiZM-KbyBYHa-9">
+          <mxGeometry x="-0.2255" y="-10" width="50" height="50" relative="1" as="geometry">
+            <mxPoint x="217.5" y="680" as="sourcePoint" />
+            <mxPoint x="220" y="810" as="targetPoint" />
+            <mxPoint as="offset" />
+            <Array as="points">
+              <mxPoint x="218" y="715" />
             </Array>
           </mxGeometry>
         </mxCell>
